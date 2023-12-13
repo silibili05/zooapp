@@ -1,12 +1,30 @@
-import React, { useState } from 'react';
+// TicketsPurchase.js
+import React, { useState, useEffect } from 'react';
 
-export function TicketsPurchase() {
+export function TicketsPurchase({ onPurchaseComplete }) {
     const [persons, setPersons] = useState('');
     const [code, setCode] = useState('');
 
+    useEffect(() => {
+        // Load data from localStorage when the component mounts
+        const storedData = JSON.parse(localStorage.getItem('purchaseData')) || {};
+        setPersons(storedData.numberOfPersons || '');
+        setCode(generateCode(storedData.numberOfPersons));
+    }, []);
+
     const handleChange = (event) => {
-        setPersons(event.target.value);
-        setCode(generateCode(event.target.value));
+        const newValue = event.target.value;
+        setPersons(newValue);
+        setCode(generateCode(newValue));
+    };
+
+    const handlePurchase = () => {
+        // Save data to localStorage
+        const dataToStore = { numberOfPersons: persons };
+        localStorage.setItem('purchaseData', JSON.stringify(dataToStore));
+
+        // Callback to inform parent component about the purchase completion
+        onPurchaseComplete();
     };
 
     const generateCode = (numberOfPersons) => {
@@ -25,6 +43,7 @@ export function TicketsPurchase() {
                 onChange={handleChange}
             />
             <p>Code: {code}</p>
+            <button onClick={handlePurchase}>Abschließen</button>
         </div>
     );
 }
