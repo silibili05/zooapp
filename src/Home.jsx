@@ -167,6 +167,37 @@ function Home() {
                         }}
                     >
 
+                        <h1>NIGERRRRRDIEIENDAFKJASHDFJKASHDFLJKASDFJHASLDKFJASHDLFKJ
+                        ASDFASDFA
+                        SDFA
+                        SDFA
+                        SDF
+                        ASDF
+                        ASDF
+                        ASD
+                        FASD
+                        FA
+                        SDF
+                        A
+                        SDF
+                        ASD
+                        F
+                        ASD
+                        FAS
+                        DF
+                        ASDF
+                        AS
+                        D
+                        F
+                        ASDF
+                        AS
+                        D
+                        F
+                        ASDF
+                        AS
+                        DF
+                        ASDF</h1>
+
                     </Typography>
                     <Box sx={{flexGrow: 1, display: {xs: 'none', md: 'flex'}}}>
                         {pages.map((page) => (
