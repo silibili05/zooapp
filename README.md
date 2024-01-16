@@ -1,3 +1,24 @@
+#This is a bad group
+# N-Word
+#We are gay #pride
+#wuguuuuuu
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
