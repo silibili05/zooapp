@@ -1,12 +1,14 @@
 import {LoginPage} from "./Login/LoginPage"
 import './App.css';
-
+import Home from './Home.jsx';
 function App() {
-    return (
-        <div className="App">
-            <LoginPage/>
-        </div>
-    );
+
+  return (
+    <div className="App">
+        <Home/>
+    </div>
+  );
+
 }
 
 export default App;
